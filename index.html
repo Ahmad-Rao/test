@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PSYCHKIKS | THE EDGE OF FOOTWEAR</title>
   <meta name="description" content="Psychkiks: The edgy, vibrant shoe brand for Gen-Z sneakerheads. Shop exclusive drops, streetwear footwear, and bold styles.">
-  <script type="module" crossorigin src="/test/assets/index-Dl7I5tWv.js"></script>
-  <link rel="stylesheet" crossorigin href="/test/assets/index-aFfCx1Lv.css">
+  <script type="module" crossorigin src="/test/assets/index-CfhvHCV9.js"></script>
+  <link rel="stylesheet" crossorigin href="/test/assets/index-sqEnQtuI.css">
 </head>
 <body class="bg-batl-dark overflow-x-hidden">
   
@@ -16,8 +16,9 @@
     <div class="hidden md:flex space-x-8 uppercase font-bold text-sm tracking-widest">
       <a href="#shop" class="hover:text-batl-lime transition-colors">Shop</a>
       <a href="#about" class="hover:text-batl-blue transition-colors">Vision</a>
-      <a href="#services" class="hover:text-batl-lime transition-colors">Custom</a>
-      <a href="#contact" class="hover:text-batl-blue transition-colors">Contact</a>
+      <a href="#" id="nav-upload" class="hover:text-batl-lime transition-colors">Upload</a>
+      <a href="#" id="nav-admin" class="hover:text-batl-blue transition-colors">Admin</a>
+      <a href="#contact" class="px-6 py-2 neon-border hover:bg-batl-lime hover:text-black transition-all">Support</a>
     </div>
     <button class="bg-batl-lime text-black font-chunky px-6 py-2 rounded-full hover:scale-105 transition-transform">SHOP NOW</button>
   </nav>
@@ -204,6 +205,53 @@
     </div>
     <div class="text-[10px] text-white/20 uppercase">© 2024 PSYCHKIKS FOOTWEAR. ALL RIGHTS RESERVED.</div>
   </footer>
+
+  <!-- Product Page (Hidden by default) -->
+  <section id="product-page" class="fixed inset-0 z-[60] bg-batl-dark hidden overflow-y-auto p-10">
+    <button id="close-product" class="absolute top-10 right-10 text-4xl neon-text-lime">&times;</button>
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-6xl mb-10">DROP YOUR DESIGNS</h1>
+      <div class="border-4 border-dashed border-white/20 rounded-3xl p-20 hover:border-batl-lime transition-colors cursor-pointer group" id="upload-zone">
+        <div class="text-8xl mb-4 opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all">📸</div>
+        <p class="text-xl uppercase tracking-widest opacity-50">Drag & Drop or Click to Upload Sneaker Photos</p>
+        <input type="file" id="file-input" class="hidden" accept="image/*" multiple>
+      </div>
+      <div id="upload-preview" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10"></div>
+    </div>
+  </section>
+
+  <!-- Admin Page (Hidden by default) -->
+  <section id="admin-page" class="fixed inset-0 z-[70] bg-batl-dark hidden flex items-center justify-center p-6">
+    <div id="admin-login" class="max-w-md w-full bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-xl">
+      <h2 class="text-4xl mb-6 text-center">COMMAND CENTER</h2>
+      <div class="space-y-4">
+        <input type="text" id="admin-user" placeholder="USERNAME" class="w-full bg-black/50 border border-white/20 p-4 rounded-xl focus:border-batl-blue outline-none text-white">
+        <input type="password" id="admin-pass" placeholder="PASSWORD" class="w-full bg-black/50 border border-white/20 p-4 rounded-xl focus:border-batl-blue outline-none text-white">
+        <button id="login-btn" class="w-full py-4 bg-batl-blue text-black font-chunky text-xl rounded-xl hover:bg-white transition-colors">ACCESS</button>
+        <p id="login-error" class="text-red-500 text-xs hidden text-center">INVALID CREDENTIALS. ACCESS DENIED.</p>
+      </div>
+    </div>
+    <div id="admin-dashboard" class="hidden w-full h-full p-10 overflow-y-auto">
+      <div class="flex justify-between items-center mb-10">
+        <h1 class="text-5xl">ADMIN DASHBOARD</h1>
+        <button id="logout-btn" class="px-6 py-2 border border-red-500 text-red-500 rounded-xl">LOGOUT</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+          <h3 class="text-xl mb-2 opacity-50">TOTAL VISITS</h3>
+          <p class="text-4xl font-chunky">1.2K</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+          <h3 class="text-xl mb-2 opacity-50">UPLOADS</h3>
+          <p class="text-4xl font-chunky" id="dashboard-uploads">0</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+          <h3 class="text-xl mb-2 opacity-50">SEO STATUS</h3>
+          <p class="text-4xl font-chunky text-green-500">ACTIVE</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
