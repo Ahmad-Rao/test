@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-psych-purple: #7000ff;
-  --color-psych-black: #050505;
+  --color-psych-purple: #8b2df9;
+  --color-psych-black: #000000;
 }
 
 :root {

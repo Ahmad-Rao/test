@@ -24,7 +24,7 @@ export const TubesBackground: React.FC<TubesBackgroundProps> = ({
   const targetMouseRef = useRef(new THREE.Vector2(0, 0));
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const colors = [0x7000ff, 0x9d00ff, 0x4a00e0, 0x8e2de2, 0xff00ff];
+  const colors = [0x8b2df9, 0x5c2d91, 0xaf50ff, 0x7d2ae8];
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -52,7 +52,7 @@ export const TubesBackground: React.FC<TubesBackgroundProps> = ({
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0x7000ff, 2, 20);
+    const pointLight = new THREE.PointLight(0x8b2df9, 2, 20);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
 
@@ -172,7 +172,7 @@ export const TubesBackground: React.FC<TubesBackgroundProps> = ({
   }, [enableClickInteraction]);
 
   return (
-    <div ref={containerRef} className={cn("relative w-full h-full overflow-hidden bg-[#050505]", className)}>
+    <div ref={containerRef} className={cn("relative w-full h-full overflow-hidden bg-[#000000]", className)}>
       <div className="relative z-10 w-full h-full">{children}</div>
     </div>
   );

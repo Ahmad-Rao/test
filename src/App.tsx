@@ -3,7 +3,7 @@ import { ShoppingBag, ChevronRight } from "lucide-react";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white">
+    <div className="min-h-screen bg-[#000000] text-white">
       <TubesBackground className="fixed inset-0 pointer-events-none" />
       
       <header className="relative z-20 flex justify-between items-center px-8 py-6">
